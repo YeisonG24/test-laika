@@ -2,15 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
 	CardWrapper,
-	BackgroundCard,
 	TypeText,
+	WrapperImage,
+	ImageCard,
 } from './style';
 
 const CardType = ({ name, onPress }) => (
 	<CardWrapper onPress={onPress}>
-		<BackgroundCard>
-			<TypeText>{name}</TypeText>
-		</BackgroundCard>
+		<TypeText>{name}</TypeText>
+		<WrapperImage>
+			<ImageCard source={require('../../../assets/images/concentrado.png')}/>
+		</WrapperImage>
 	</CardWrapper>
 )
 

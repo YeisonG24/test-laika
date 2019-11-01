@@ -4,13 +4,15 @@ import {
 	MainWrapper,
 	ButtonWrapper,
 	IconWrapper,
-	TextCategory
+	TextCategory,
 } from './style';
+import CustomIcon from '../custom-icon';
 
-const CardCategory = ({ name, onPress }) => (
-	<MainWrapper>
+const CardCategory = ({ name, onPress, selected }) => (
+	<MainWrapper selected={selected}>
 		<ButtonWrapper onPress={onPress}>
 			<IconWrapper>
+				<CustomIcon nameIcon="md-medal" sizeIcon={20} colorIcon="#6951AE" />
 			</IconWrapper>
 			<TextCategory>{name}</TextCategory>
 		</ButtonWrapper>
@@ -20,11 +22,13 @@ const CardCategory = ({ name, onPress }) => (
 CardCategory.defaultProps = {
 	name: 'Categoria',
 	onPress: () => {},
+	selected: false,
 }
 
 CardCategory.propTypes = {
 	name: PropTypes.string,
 	onPress: PropTypes.func,
+	selected: PropTypes.bool,
 }
 
 export default CardCategory;

@@ -6,11 +6,15 @@ export const MainWrapper = styled.View`
 	display: flex;
 	border-radius: 10px;
 	flex-direction: row;
-	background-color: #F2F2F2;
+	background-color: #FFFFFF;
 `;
 
 export const WrapperIcon = styled.View`
 	flex: 1;
+	align-items: center;
+	padding-top: 3.5%;
+	padding-left: 3%;
+	padding-right: 2%;
 `;
 
 export const Input = styled.TextInput`
@@ -18,6 +22,9 @@ export const Input = styled.TextInput`
 	color: #9D4FA7;
 `;
 
-export const Voice = styled.View`
+export const VoiceWrapper = styled.View`
 	flex: 1;
+	padding-top: 3.5%;
+	padding-right: 3%;
+	padding-left: 2%;
 `;

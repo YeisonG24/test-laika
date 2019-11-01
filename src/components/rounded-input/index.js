@@ -4,16 +4,19 @@ import {
 	MainWrapper,
 	WrapperIcon,
 	Input,
-	Voice,
+	VoiceWrapper,
 } from './style';
 import CustomIcon from '../custom-icon';
 
 const RoundedInput = ({ placeholder }) => (
 	<MainWrapper>
 		<WrapperIcon>
+			<CustomIcon nameIcon="md-search" sizeIcon={25} colorIcon="#6951AE" />
 		</WrapperIcon>
 		<Input placeholder={placeholder}/>
-		<Voice></Voice>
+		<VoiceWrapper>
+			<CustomIcon nameIcon="md-alert" sizeIcon={25} colorIcon="#6951AE" />
+		</VoiceWrapper>
 	</MainWrapper>
 )
 

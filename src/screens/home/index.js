@@ -4,7 +4,7 @@ import {
   MainWrapper,
   HeaderScreen,
   CointsWrapper,
-  ImageCoint,
+  IconWrapper,
   TextCoints,
   ImageWrapper,
   ImageLaika,
@@ -15,37 +15,48 @@ import {
   SearchWrapper,
   ContentWrapper,
   CategoryWrapper,
+  WrapperTypes,
 } from './style';
 import RoundedInput from '../../components/rounded-input';
 import CardCategory from '../../components/card-category';
 import CardType from '../../components/card-type';
 import CardCalls from '../../components/card-calls';
+import CustomIcon from '../../components/custom-icon';
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       scrollIncator: false,
+      selected: false,
     };
   }
 
+  onSelect = () => {
+    const { selected } = this.state;
+    this.setState({ selected: !selected });
+  }
+
   render () {
-    const { scrollIncator } = this.state;
+    const { scrollIncator, selected } = this.state;
     return (
       <MainWrapper>
         <HeaderScreen>
           <CointsWrapper>
-            <ImageCoint source={{uri: 'https://facebook.github.io/react-native/img/tiny_logo.png'}} />
+            <IconWrapper>
+              <CustomIcon nameIcon="md-cash" sizeIcon={25} colorIcon="yellow" />
+            </IconWrapper>
             <TextCoints>$ 0.00</TextCoints>
           </CointsWrapper>
           <ImageWrapper>
-            <ImageLaika source={{uri: 'https://facebook.github.io/react-native/img/tiny_logo.png'}} />
+            <CustomIcon nameIcon="md-paw" sizeIcon={30} colorIcon="white" />
           </ImageWrapper>
           <CityWrapper>
             <TextCity>Bogotá</TextCity>
             <Arrow>></Arrow>
           </CityWrapper>
           <ShoppingCart>
+            <CustomIcon nameIcon="md-cart" sizeIcon={25} colorIcon="white" />
           </ShoppingCart>
         </HeaderScreen>
         <SearchWrapper>
@@ -55,12 +66,16 @@ class Home extends Component {
           <CardCalls service="Croquetas" />
           <CategoryWrapper>
             <ScrollView horizontal showsHorizontalScrollIndicator={scrollIncator}>
-              <CardCategory name="Categoria" onPress={() => {}} />
-              <CardCategory name="Categoria" onPress={() => {}} />
-              <CardCategory name="Categoria" onPress={() => {}} />
+              <CardCategory name="Categoria" selected={selected} onPress={this.onSelect} />
+              <CardCategory name="Categoria" selected={selected} onPress={this.onSelect} />
+              <CardCategory name="Categoria" selected={selected} onPress={this.onSelect} />
             </ScrollView>
           </CategoryWrapper>
-          <CardType name="Concentrado" onPress={() => {}} />
+          <WrapperTypes>
+            <CardType name="Concentrado" onPress={() => {}} />
+            <CardType name="Concentrado" onPress={() => {}} />
+            <CardType name="Concentrado" onPress={() => {}} />
+          </WrapperTypes>
         </ContentWrapper>
       </MainWrapper>
     )

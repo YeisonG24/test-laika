@@ -12,6 +12,7 @@ export const HeaderScreen = styled.View`
   flex: 1;
   flex-direction: row;
   display: flex;
+  padding-top: 10%;
 `;
 
 export const CointsWrapper = styled.View`
@@ -19,19 +20,20 @@ export const CointsWrapper = styled.View`
   display: flex;
   flex: 2;
   padding-vertical: 2%;
+  padding-left: 3%;
 `;
 
-export const ImageCoint = styled.Image`
-  width: 15px;
-  height: 15px;
-  resize-mode: stretch;
-  flex: 5;
+export const IconWrapper = styled.View`
+  width: 30px;
+  height: 30px;
 `;
 
 export const TextCoints = styled.Text`
   font-size: 12px;
   color: #FFFFFF;
   flex: 5;
+  font-weight: bold;
+  padding-top: 6%;
 `;
 
 export const ImageWrapper = styled.View`
@@ -59,14 +61,14 @@ export const TextCity = styled.Text`
 
 export const Arrow = styled.Text`
   color: #FFFFFF;
-  font-size: 25px;
+  font-size: 24px;
   font-weight: bold;
   margin-left: 5%;
 `;
 
 export const ShoppingCart = styled.View`
   flex: 1;
-  background-color: red;
+  padding-top: 1%;
 `;
 
 export const SearchWrapper = styled.View`
@@ -89,4 +91,12 @@ export const CategoryWrapper = styled.View`
   width: 100%;
   height: 16%;
   margin-vertical: 1%;
+`;
+
+export const WrapperTypes = styled.View`
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-left: 1%;
 `;

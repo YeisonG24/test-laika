@@ -15,11 +15,16 @@ export const WrapperTouchable = styled.TouchableOpacity.attrs({
 	width: 100%;
 	height: 100%;
 	flex-direction: row;
+	padding-top: 2%;
+	display: flex;
 `;
 
-export const PhotoWrapper = styled.Image`
-	width: 10px;
-	height: 10px;
+export const PhotoWrapper = styled.View`
+	width: 20px;
+	height: 20px;
+	border-radius: 60px;
+	flex: 1;
+	margin-left: 3%;
 `
 
 export const TextRegular  = styled.Text`
@@ -39,5 +44,15 @@ export const ButtonCall = styled.TouchableOpacity`
 	height: 20px;
 	border-radius: 60px;
 	background-color: #6951AE;
-	margin-left: 3%;
+	padding-left: 14%;
+`;
+
+export const WrapperInfo = styled.View`
+	flex: 8;
+	flex-direction: row;
+`;
+
+export const WrapperButton = styled.View`
+	flex: 1;
+	align-items: center;
 `;
